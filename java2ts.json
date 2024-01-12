@@ -1,0 +1,19 @@
+{
+    "packageRoot": "/Users/yanjietu/Documents/weihu/java_kol/src/main/java/cn/weihu/kol/db/po",
+    "outputPath": "./src/types",
+    "sourceReplace": {
+        "\\n\\s+\\* {@inheritDoc}": "",
+        "\\* @return ": "* @returns ",
+        "\\* @since[^\\n*]*": "*",
+        "{@code true}": "`true`"
+    },
+    "targetReplace": {
+        "java.lang.String": "string"
+    },
+    "options": {
+        "convertAnnotations": false,
+        "suppressTypeWithInitializer": false,
+        "addNullUnionType": false,
+        "wrapStringLiterals": false
+    }
+}

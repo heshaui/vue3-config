@@ -1,9 +1,11 @@
 <script setup lang="ts">
-
+    import Page from '../components/basic/Page.vue'
 </script>
 
 <template>
-    <div>112</div>
+    <Page>
+        1133
+    </Page>
 </template>
 
 <style scoped>

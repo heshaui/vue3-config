@@ -15,7 +15,7 @@
     width: 100%;
 
     .inner {
-        background: #000;
+        background: #fff;
     }
 }
 </style>

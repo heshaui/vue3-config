@@ -4,7 +4,8 @@
 
 <template>
     <Page>
-        1133
+        <el-button>Test</el-button>
+        <el-icon><Edit /></el-icon>
     </Page>
 </template>
 

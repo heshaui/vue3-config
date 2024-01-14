@@ -1,11 +1,11 @@
 <script setup lang="ts">
     import Page from '../components/basic/Page.vue'
+    import SearchBar from '@/components/SearchBar.vue';
 </script>
 
 <template>
     <Page>
-        <el-button>Test</el-button>
-        <el-icon><Edit /></el-icon>
+        <SearchBar></SearchBar>
     </Page>
 </template>
 

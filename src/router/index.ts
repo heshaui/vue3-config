@@ -78,20 +78,14 @@ const router = createRouter({
     {
       path: '/technicalApplySituation',
       name: 'technicalApplySituation',
-      // title: '重要地域技术分支申请情况', // 企业通用: 重要技术地域分布-气泡
+      // title: '重要地域技术分支申请情况', // 重要技术分支主要申请人分布 // 企业通用: 重要技术地域分布-气泡
       component: () => import('../views/technicalApplySituation.vue')
     },
     {
       path: '/technicalApplyAnalysis',
       name: 'technicalApplyAnalysis',
-      // title: '重要地域技术分支申请人分析', // 企业通用: 重要技术地域分布-横柱
+      // title: '领域内主要申请人分析', //-横柱
       component: () => import('../views/technicalApplyAnalysis.vue')
-    },
-    {
-      path: '/applicantDistribution',
-      name: 'applicantDistribution',
-      // title: '重要技术分支主要申请人分布', 气泡
-      component: () => import('../views/applicantDistribution.vue')
     },
     {
       path: '/newEntry',
@@ -120,7 +114,7 @@ const router = createRouter({
     {
       path: '/inventorDirection',
       name: 'inventorDirection',
-      // title: '发明人研发方向分析', // 共同研发技术方向通用-气泡
+      // title: '发明人研发方向分析', // 共同研发技术方向-气泡
       component: () => import('../views/inventorDirection.vue')
     },
     {

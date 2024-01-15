@@ -4,7 +4,7 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/search',
+      path: '/',
       name: 'home',
       title: '搜索',
       component: () => import('../views/search.vue')

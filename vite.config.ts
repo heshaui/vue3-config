@@ -32,6 +32,10 @@ export default defineConfig({
       ],
 
       dts: path.resolve(pathSrc, 'auto-imports.d.ts'),
+      eslintrc: {
+          enabled: false
+          // 1、改为true用于生成eslint配置。2、生成后改回false，避免重复生成消耗
+      }
     }),
 
     Components({
@@ -43,7 +47,7 @@ export default defineConfig({
         // 自动导入 Element Plus 组件
         ElementPlusResolver(),
       ],
-
+      dirs: ['src/components'],
       dts: path.resolve(pathSrc, 'components.d.ts'),
     }),
 

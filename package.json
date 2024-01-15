@@ -10,7 +10,8 @@
     "test:unit": "vitest",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
-    "java2ts": "java2ts java2ts.json"
+    "java2ts": "java2ts java2ts.json",
+    "up": "npm install --registry=https://registry.npmmirror.com"
   },
   "dependencies": {
     "echarts": "^5.4.3",

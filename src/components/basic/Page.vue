@@ -1,21 +1,18 @@
 <script setup lang="ts">
-
+    
 </script>
 
 <template>
     <div class="basic-page">
-        <div class="inner">
+        <Layout>
             <slot></slot>
-        </div>
+        </Layout>
     </div>
 </template>
 
 <style scoped lang="scss">
 .basic-page {
-    width: 100%;
-
-    .inner {
-        background: #fff;
-    }
+    width: 1100px;
+    margin: 0 auto;
 }
 </style>

@@ -6,7 +6,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      // title: '搜索', // 搜索
+      // title: '专利分析主页-技术全境',
       component: () => import('../views/search.vue')
     },
     {
@@ -15,12 +15,12 @@ const router = createRouter({
       // title: '技术导航概览', // 付费版
       component: () => import('../views/navigation.vue')
     },
-    {
-      path: '/pay',
-      name: 'pay',
-      // title: '支付',
-      component: () => import('../views/pay.vue')
-    },
+    // {
+    //   path: '/pay',
+    //   name: 'pay',
+    //   // title: '支付',
+    //   component: () => import('../views/pay.vue')
+    // },
     {
       path: '/authTrend',
       name: 'authTrend',
@@ -154,10 +154,10 @@ const router = createRouter({
       component: () => import('../views/claimsNumber.vue')
     },
     {
-      path: '/company',
-      name: 'company',
+      path: '/companySearch',
+      name: 'companySearch',
       // title: '企业分析概况', 搜索
-      component: () => import('../views/company.vue')
+      component: () => import('../views/companySearch.vue')
     },
     {
       path: '/companyOverview',

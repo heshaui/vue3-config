@@ -19,7 +19,6 @@
     }
     const onSave = (form: { name: string }) => {
         title.value = form.name
-        infoVisible.value = false
     }
 </script>
 
@@ -66,6 +65,6 @@
                 <el-option v-for="item of ipcTypes" :key="item.value" :label="item.label" :value="item.value" />
             </el-select>
         </div>
-        <EditDialog v-if="infoVisible" :dialog-edit-visible="infoVisible" @onSave="onSave" />     
+        <EditDialog v-if="infoVisible" v-model:visible="infoVisible" @onSave="onSave" />     
     </div>
 </template>

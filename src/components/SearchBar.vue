@@ -15,8 +15,11 @@
         { label: 'H04L29/08', value: 2 }
     ]
     const onTitClick = () => {
-        title.value = 'T1=（汽车）or （手机）'
         infoVisible.value = true
+    }
+    const onSave = (form: { name: string }) => {
+        title.value = form.name
+        infoVisible.value = false
     }
 </script>
 
@@ -40,13 +43,13 @@
             <el-select v-model="form.ipcType" multiple clearable placeholder="IPC分类-部" class="mr-[20px]">
                 <template #header>
                     <div class="text-base/[30px] font-medium">选择IPC分类</div>
-                    <el-checkbox
+                    <!-- <el-checkbox
                         v-model="checkAll"
                         :indeterminate="indeterminate"
                         @change="handleCheckAll"
                     >
                         IPC分类-部
-                    </el-checkbox>
+                    </el-checkbox> -->
                 </template>
                 <el-option v-for="item in ipcTypes" :key="item.value" :label="item.label" :value="item.value" />
             </el-select>
@@ -62,6 +65,7 @@
             <el-select v-model="form.ipcType" multiple clearable placeholder="IPC分类-部">
                 <el-option v-for="item of ipcTypes" :key="item.value" :label="item.label" :value="item.value" />
             </el-select>
-        </div>     
+        </div>
+        <EditDialog v-if="infoVisible" :dialog-edit-visible="infoVisible" @onSave="onSave" />     
     </div>
 </template>

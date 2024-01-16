@@ -7,7 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    EditDialog: typeof import('./components/EditDialog.vue')['default']
+    EditDialog: typeof import('./components/basic/EditDialog.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElDialog: typeof import('element-plus/es')['ElDialog']
     ElForm: typeof import('element-plus/es')['ElForm']
@@ -19,6 +19,6 @@ declare module 'vue' {
     Page: typeof import('./components/basic/Page.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    SearchBar: typeof import('./components/SearchBar.vue')['default']
+    SearchBar: typeof import('./components/basic/SearchBar.vue')['default']
   }
 }

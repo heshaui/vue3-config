@@ -4,7 +4,7 @@
 
 <template>
     <div class="basic-page">
-        <Layout>
+        <Layout v-bind="$attrs">
             <slot></slot>
         </Layout>
     </div>
@@ -12,7 +12,8 @@
 
 <style scoped lang="scss">
 .basic-page {
-    width: 1100px;
+    width: 85%;
     margin: 0 auto;
+    min-width: 1200px;
 }
 </style>

@@ -32,7 +32,7 @@
                 <el-input v-model="form.name" placeholder="输入报告名称"></el-input>
             </el-form-item>
             <el-form-item label="技术领域">
-                <div>
+                <div class="mb-[15px]">
                     <el-button type="primary" plain>关键词</el-button>
                     <el-button plain>检索表达式</el-button>
                 </div>

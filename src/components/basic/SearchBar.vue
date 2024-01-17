@@ -23,7 +23,7 @@
 </script>
 
 <template>
-    <div class="px-[20px] py-[10px] round border border-gray-300 border-solid">
+    <div class="px-[20px] py-[10px] rounded-md border border-[#ccc] border-solid">
         <div class="flex justify-between mb-[20px]">
             <div class="flex items-center cursor-pointer" @click="onTitClick">
                 <span class="text-xl mr-[15px]">{{ title }}</span>

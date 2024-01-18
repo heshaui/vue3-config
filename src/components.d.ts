@@ -31,6 +31,7 @@ declare module 'vue' {
     Page: typeof import('./components/basic/Page.vue')['default']
     PageHeader: typeof import('./components/basic/PageHeader.vue')['default']
     Pie: typeof import('./components/echarts/Pie.vue')['default']
+    RectangleTree: typeof import('./components/echarts/RectangleTree.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SearchBar: typeof import('./components/basic/SearchBar.vue')['default']

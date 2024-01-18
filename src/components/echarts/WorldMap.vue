@@ -45,7 +45,6 @@ onMounted(() => {
                 roam: true,
                 map: 'WorldMap',
                 itemStyle: {
-                    // areaColor:
                     borderColor: '#fff'
                 },
                 emphasis: {
@@ -57,8 +56,7 @@ onMounted(() => {
                     { name: 'China', value: 20010 },
                     { name: 'Australia', value: 12010 },
                     { name: 'United States', value: 32010 },
-                    { name: 'Japan', value: 22010 },
-                    
+                    { name: 'Japan', value: 22010 }
                 ]
             }
         ]

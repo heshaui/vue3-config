@@ -8,9 +8,11 @@
             <h4 class="title text-center mt-[100px] text-[24px]">产品名</h4>
             <div class="flex mt-[20px]">
                 <el-card class="flex-1" shadow="hover">
-                    <DoubleLineBar />
+                    <DoubleLineBar title="专利趋势" />
                 </el-card>
-                <el-card class="flex-1" shadow="hover"> Hover </el-card>
+                <el-card class="flex-1" shadow="hover">
+                    <Pie title="专利类型" />
+                </el-card>
             </div>
             <div class="flex mt-[20px]">
                 <el-card class="flex-1" shadow="hover"> Hover </el-card>
@@ -31,7 +33,7 @@
 <style scoped lang="scss">
 .overview-content {
     .title {
-        font-size: 18px;
+        font-size: 25px;
         font-weight: bold;
     }
 

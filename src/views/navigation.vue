@@ -11,7 +11,7 @@
                     <DoubleLineBar title="专利趋势" />
                 </el-card>
                 <el-card class="flex-1" shadow="hover">
-                    <Pie title="专利类型" />
+                    <Pie title="专利类型" annular />
                 </el-card>
             </div>
             <div class="flex mt-[20px]">
@@ -27,12 +27,15 @@
                     <Bar
                         title="申请人排名分析"
                         :axis="['华为', '小米', '苹果', '三星', '一加']"
+                        :data="[100, 200, 300, 500, 400]"
                     />
                 </el-card>
                 <el-card class="flex-1" shadow="hover">
                     <Bar
                         title="发明人排名分析"
-                        :axis="['米波', '奈文摩尔', '尤涅若', '拉比克', '']"
+                        :axis="['米波', '奈文摩尔', '尤涅若', '拉比克', '凯尔']"
+                        :data="[100, 200, 300, 500, 400]"
+                        left="15%"
                         horizontal
                     />
                 </el-card>
@@ -41,7 +44,9 @@
                 <el-card class="flex-1" shadow="hover">
                     <Bar
                         title="重点专利"
-                        :axis="['米波', '奈文摩尔', '尤涅若', '拉比克', '']"
+                        :axis="['CN12837912A', 'CN12834912A', 'CN12837932A', 'CN128311912B', 'CN12341912B']"
+                        :data="[100, 200, 300, 500, 400]"
+                        left="18%"
                         horizontal
                     />
                 </el-card>

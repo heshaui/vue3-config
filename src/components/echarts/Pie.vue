@@ -1,24 +1,22 @@
 <script setup lang="ts">
 let dom = ref(null)
-const { proxy } = getCurrentInstance()
+const { proxy } = getCurrentInstance() as any
 
-defineProps({
-    title: String
+const props = defineProps({
+    title: String,
+    // 是否环形
+    annular: Boolean
 })
 
 const options = {
     tooltip: {
         trigger: 'item'
     },
-    // legend: {
-    //     orient: 'vertical',
-    //     left: 'left'
-    // },
     series: [
         {
             // name: 'Access From',
             type: 'pie',
-            radius: '50%',
+            radius: props.annular ? ['40%', '70%'] : '50%',
             data: [
                 { value: 1048, name: 'PCT' },
                 { value: 735, name: '发明' },

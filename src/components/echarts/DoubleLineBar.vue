@@ -1,6 +1,6 @@
 <script setup lang="ts">
 let dom = ref(null)
-const { proxy } = getCurrentInstance()
+const { proxy } = getCurrentInstance() as any
 
 defineProps({
     title: String
@@ -56,7 +56,7 @@ const options = {
             type: 'bar',
             barWidth: '60%',
             tooltip: {
-                valueFormatter: function (value) {
+                valueFormatter: function (value: string) {
                     return value;
                 }
             },
@@ -68,7 +68,7 @@ const options = {
             barWidth: '40%',
             barGap: '-82%',
             tooltip: {
-                valueFormatter: function (value) {
+                valueFormatter: function (value: string) {
                     return value;
                 }
             },
@@ -79,7 +79,7 @@ const options = {
             type: 'line',
             yAxisIndex: 1,
             tooltip: {
-                valueFormatter: function (value) {
+                valueFormatter: function (value: string) {
                 return value + '%';
                 }
             },

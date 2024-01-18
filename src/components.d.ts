@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AsideBar: typeof import('./components/basic/AsideBar.vue')['default']
+    DoubleLineBar: typeof import('./components/echarts/DoubleLineBar.vue')['default']
     EditDialog: typeof import('./components/basic/EditDialog.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCard: typeof import('element-plus/es')['ElCard']

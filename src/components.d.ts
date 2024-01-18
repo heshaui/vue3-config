@@ -25,6 +25,7 @@ declare module 'vue' {
     ElRow: typeof import('element-plus/es')['ElRow']
     ElSelect: typeof import('element-plus/es')['ElSelect']
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
+    HistogramChart: typeof import('./components/basic/HistogramChart.vue')['default']
     Layout: typeof import('./components/basic/Layout.vue')['default']
     Page: typeof import('./components/basic/Page.vue')['default']
     PageHeader: typeof import('./components/basic/PageHeader.vue')['default']

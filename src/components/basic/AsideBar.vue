@@ -1,6 +1,6 @@
 <script setup lang="ts">
     const menus = [
-        { name: '企业分析概览', icon: 'el-icon-edit' },
+        { name: '企业分析概览' },
         {
             name: '专利概况',
             children: [
@@ -30,20 +30,18 @@
         </el-select>
         <el-button type="primary" class="w-full mb-1">华为科技</el-button>
         <el-menu
-            class="el-menu-vertical-demo"
-            default-active="2"
+            class="rounded-b-md border-noen border-0"
+            :default-active="0"
             :show-timeout="100"
         >
         <template v-for="(menu, index) of menus" :key="menu.name">
             <el-sub-menu v-if="menu.children" :index="index">
                 <template #title>
-                    <i :class="menu.icon" />
                     <span>{{ menu.name }}</span>
                 </template>
                 <el-menu-item v-for="(child, cIndex) of menu.children" :key="child.name" :index="`${index}-${cIndex}`">{{ child.name }}</el-menu-item>
             </el-sub-menu>
             <el-menu-item v-else :index="index">
-                  <el-icon><icon-menu /></el-icon>
                   <template #title>{{ menu.name }}</template>
             </el-menu-item>
         </template>

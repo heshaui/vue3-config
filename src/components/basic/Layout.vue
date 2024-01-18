@@ -29,8 +29,7 @@
     }
     .aside-bar {
         width: 240px;
-        height: 100%;
-        flex: 0 0 atuo;
+        flex: 0 0 auto;
         margin-left: 20px;
     }
 }

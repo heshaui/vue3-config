@@ -20,6 +20,6 @@
 .basic-page {
     width: 1100px;
     margin: 0 auto;
-    min-width: 1200px;
+    min-width: 1100px;
 }
 </style>

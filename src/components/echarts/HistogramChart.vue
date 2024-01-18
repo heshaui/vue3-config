@@ -5,10 +5,6 @@
     })
     const chartRef = ref()
     const option = { 
-        title: {
-            text: '发明人',
-            left: 'center'
-        },
         tooltip: {
             trigger: 'axis',
             axisPointer: {            // 坐标轴指示器，坐标轴触发有效
@@ -18,7 +14,8 @@
         grid: {
             left: '3%',
             right: '4%',
-            bottom: '3%',
+            bottom: '5%',
+            top: '0',
             containLabel: true
         },
         xAxis: [
@@ -39,7 +36,9 @@
                 axisTick: {
                     alignWithLabel: true
                 },
-                name: '发明人'
+                name: '发明人',
+                nameLocation: 'middle',
+                nameGap: 30
             }
         ],
         series: [

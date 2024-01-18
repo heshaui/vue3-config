@@ -23,11 +23,28 @@
                 </el-card>
             </div>
             <div class="flex mt-[20px]">
-                <el-card class="flex-1" shadow="hover"> Hover </el-card>
-                <el-card class="flex-1" shadow="hover"> Hover </el-card>
+                <el-card class="flex-1" shadow="hover">
+                    <Bar
+                        title="申请人排名分析"
+                        :axis="['华为', '小米', '苹果', '三星', '一加']"
+                    />
+                </el-card>
+                <el-card class="flex-1" shadow="hover">
+                    <Bar
+                        title="发明人排名分析"
+                        :axis="['米波', '奈文摩尔', '尤涅若', '拉比克', '']"
+                        horizontal
+                    />
+                </el-card>
             </div>
             <div class="flex mt-[20px]">
-                <el-card class="flex-1" shadow="hover"> Hover </el-card>
+                <el-card class="flex-1" shadow="hover">
+                    <Bar
+                        title="重点专利"
+                        :axis="['米波', '奈文摩尔', '尤涅若', '拉比克', '']"
+                        horizontal
+                    />
+                </el-card>
                 <div class="flex-1 ml-[20px]"></div>
             </div>
         </div>

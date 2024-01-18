@@ -35,5 +35,6 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     SearchBar: typeof import('./components/basic/SearchBar.vue')['default']
     SvgIcon: typeof import('./components/basic/SvgIcon.vue')['default']
+    WorldMap: typeof import('./components/echarts/WorldMap.vue')['default']
   }
 }

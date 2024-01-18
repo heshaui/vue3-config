@@ -22,6 +22,7 @@
     <el-table 
         v-bind="$attrs" 
         stripe border
+        :max-height="440"
     >
         <el-table-column v-for="(column, index) in columns" :key="index" v-bind="column"></el-table-column>
     </el-table>

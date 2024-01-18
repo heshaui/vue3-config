@@ -32,6 +32,7 @@ declare module 'vue' {
     HistogramChart: typeof import('./components/echarts/HistogramChart.vue')['default']
     Layout: typeof import('./components/basic/Layout.vue')['default']
     MyTable: typeof import('./components/basic/MyTable.vue')['default']
+    OperationDialog: typeof import('./components/basic/OperationDialog.vue')['default']
     Page: typeof import('./components/basic/Page.vue')['default']
     PageHeader: typeof import('./components/basic/PageHeader.vue')['default']
     Pie: typeof import('./components/echarts/Pie.vue')['default']

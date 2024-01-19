@@ -1,6 +1,6 @@
 <script setup lang="ts">
     const props = defineProps({
-        tableColumns: { 
+        tableColumns: {
             type: Array,
             default: () => []
         }
@@ -23,6 +23,7 @@
         v-bind="$attrs" 
         stripe border
         :max-height="440"
+        empty-text="暂无数据"
     >
         <el-table-column v-for="(column, index) in columns" :key="index" v-bind="column"></el-table-column>
     </el-table>

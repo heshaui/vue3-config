@@ -7,7 +7,7 @@
 
 <template>
     <div>
-        <h3 class="text-xl/[20px] mb-[10px]">{{ pageTitle }}</h3>
+        <h3 class="text-xl/[20px] my-[10px] font-bold">{{ pageTitle }}</h3>
         <p class="text-sm/[30px]">{{ subTit }}</p>
         <el-divider style="margin-top: 10px;"/>
     </div>

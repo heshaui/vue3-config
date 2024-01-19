@@ -15,6 +15,12 @@ const router = createRouter({
       // title: '技术导航概览', // 付费版
       component: () => import('../views/navigation.vue')
     },
+    {
+      path: '/report',
+      name: 'report',
+      // title: '技术导航概览', // 付费版
+      component: () => import('../views/report.vue')
+    },
     // {
     //   path: '/pay',
     //   name: 'pay',

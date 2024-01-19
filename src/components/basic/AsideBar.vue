@@ -19,16 +19,18 @@
         },
         
     ]
-    const queryValue = ref('')
+    const queryValue = ref('all')
 </script>
 
 <template>
-    <aside class="rounded-md border border-[#ccc] border-solid">
-        <h3 class="text-center text-lg/10">我的检索分析报告</h3>
-        <el-select v-model="queryValue" class="mb-1">
-            <el-option label="全部" value="" />
+    <aside class="rounded-md border border-[#ccc] border-solid p-[10px]">
+        <h3 class="text-center text-[18px] font-semibold mb-[10px] text-[#333]">我的检索分析报告</h3>
+        <el-select v-model="queryValue" placeholder="请选择" size="large" class="mb-[10px]">
+            <el-option label="全部报告" value="all" />
+            <el-option label="技术全景分析报告" :value="1" />
+            <el-option label="企业分析报告" :value="2" />
+            <el-option label="竞争报告" :value="3" />
         </el-select>
-        <el-button type="primary" class="w-full mb-1">华为科技</el-button>
         <el-menu
             class="rounded-b-md border-noen border-0"
             default-active="0"

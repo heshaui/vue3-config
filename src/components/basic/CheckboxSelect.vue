@@ -3,5 +3,5 @@
 </script>
 
 <template>
-    <icon><Operation /></icon>
+    
 </template>

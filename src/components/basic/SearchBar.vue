@@ -3,7 +3,7 @@
     const infoVisible = ref(false)
     const title = ref('北京遥体科技有限公司')
     const quantity = ref(1000)
-    const form = reactive({
+    const form:any = reactive({
         ipcType: [],
         applicationYear: [],
         publicYear: [],
@@ -11,14 +11,31 @@
         patentType: []
     })
     const ipcTypes = [
-        { label: 'B60R16/02', value: 1 },
-        { label: 'H04L29/08', value: 2 }
+        { label: 'B60R16/02', value: '1' },
+        { label: 'H04L29/08', value: '2' }
+    ]
+    const patentValiditys = [
+        { label: '有效', value: '1' },
+        { label: '失效', value: '2' },
+        { label: '审中', value: '3' },
+        { label: 'PCT制定期满', value: '4' },
+        { label: 'PCT制定期内', value: '5' },
+    ]
+    const patentTypes = [
+        { label: '发明申请', value: '1' },
+        { label: '实用新型', value: '2' },
+        { label: '外观设计', value: '3' },
+        { label: '其它', value: '4' },
     ]
     const onEdit = () => {
         infoVisible.value = true
     }
     const onSave = (form: { name: string }) => {
         title.value = form.name
+}
+    const onSearch = (sels:any, type:any) => {
+        form[type] = sels
+        console.log(sels)
     }
 </script>
 
@@ -37,31 +54,11 @@
             <span class="float-right">申请量：{{ quantity }}条</span>
         </div>
         <div class="flex justify-between">
-            <el-select v-model="form.ipcType" multiple clearable placeholder="IPC分类" class="mr-[20px]">
-                <template #header>
-                    <div class="text-base/[30px] font-medium">选择IPC分类</div>
-                    <!-- <el-checkbox
-                        v-model="checkAll"
-                        :indeterminate="indeterminate"
-                        @change="handleCheckAll"
-                    >
-                        IPC分类-部
-                    </el-checkbox> -->
-                </template>
-                <el-option v-for="item in ipcTypes" :key="item.value" :label="item.label" :value="item.value" />
-            </el-select>
-            <el-select v-model="form.ipcType" multiple clearable placeholder="申请年" class="mr-[20px]">
-                <el-option v-for="item of ipcTypes" :key="item.value" :label="item.label" :value="item.value" />
-            </el-select>
-            <el-select v-model="form.ipcType" multiple clearable placeholder="公开年" class="mr-[20px]">
-                <el-option v-for="item of ipcTypes" :key="item.value" :label="item.label" :value="item.value" />
-            </el-select>
-            <el-select v-model="form.ipcType" multiple clearable placeholder="专利有效性" class="mr-[20px]">
-                <el-option v-for="item of ipcTypes" :key="item.value" :label="item.label" :value="item.value" />
-            </el-select>
-            <el-select v-model="form.ipcType" multiple clearable placeholder="专利类型">
-                <el-option v-for="item of ipcTypes" :key="item.value" :label="item.label" :value="item.value" />
-            </el-select>
+            <CheckboxSelect label="IPC分类" selectTit="选择IPC分类" :data="ipcTypes" class="mr-[20px]" @onSave="onSearch($event, 'ipcType')" />
+            <DateSelect label="申请年" selectTit="选择起止年份" @onSave="onSearch($event, 'applicationYear')"/>
+            <DateSelect label="公开年" selectTit="选择起止年份" @onSave="onSearch($event, 'publicYear')"/>
+            <CheckboxSelect label="专利有效性" selectTit="选择专利有效性" :data="patentValiditys" class="mr-[20px]" @onSave="onSearch($event, 'patentValidity')" />
+            <CheckboxSelect label="专利类型" selectTit="选择专利类型" :data="patentTypes" class="mr-[20px]" @onSave="onSearch($event, 'patentType')" />
         </div>
         <EditDialog v-if="infoVisible" v-model:visible="infoVisible" @onSave="onSave" />     
     </div>

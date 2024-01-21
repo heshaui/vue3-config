@@ -26,7 +26,11 @@
 </script>
 
 <template>
-    <el-dialog v-model="visible" title="编辑">
+    <el-dialog v-model="visible" title="编辑" width="500px">
+        <template #header>
+            <div class="text-[18px] text-[#333] mb-[10px]">编辑</div>
+            <div class="text-[12px] text-[#666]">重新编辑技术领域后，将清空已选择筛选项</div>
+        </template>
         <el-form :model="form" label-position="top">
             <el-form-item label="报告名称" label-width="70" label-position="right">
                 <el-input v-model="form.name" placeholder="输入报告名称"></el-input>

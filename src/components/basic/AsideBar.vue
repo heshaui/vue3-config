@@ -1,23 +1,27 @@
 <script setup lang="ts">
     const menus = [
-        { name: '企业分析概览' },
         {
-            name: '专利概况',
+            name: '北京遥体科技有限公司',
             children: [
-                { name: '非付费地方的' },
-                { name: '非付费地方的' },
-                { name: '非付费地方的' },
-                {name: '非付费地方的'}
-                
+                { name: '企业分析概览' },
+                {
+                    name: '专利概况',
+                    children: [
+                        { name: '非付费地方的' },
+                        { name: '非付费地方的' },
+                        { name: '非付费地方的' },
+                        {name: '非付费地方的'}
+                        
+                    ]
+                },
+                {
+                    name: '专利概况',
+                    children: [
+                        { name: '非付费地方的' }
+                    ]
+                }
             ]
-        },
-        {
-            name: '专利概况',
-            children: [
-                { name: '非付费地方的' }
-            ]
-        },
-        
+        }
     ]
     const queryValue = ref('all')
 </script>
@@ -36,18 +40,17 @@
             default-active="0"
             :show-timeout="100"
         >
-        <template v-for="(menu, index) of menus" :key="menu.name">
-            <el-sub-menu v-if="menu.children" :index="`${index}`">
-                <template #title>
-                    <span>{{ menu.name }}</span>
-                </template>
-                <el-menu-item v-for="(child, cIndex) of menu.children" :key="child.name" :index="`${index}-${cIndex}`">{{ child.name }}</el-menu-item>
-            </el-sub-menu>
-            <el-menu-item v-else :index="`${index}`">
-                  <template #title>{{ menu.name }}</template>
-            </el-menu-item>
-        </template>
-        
-      </el-menu>
+            <template v-for="(menu, index) of menus" :key="menu.name">
+                <el-sub-menu v-if="menu.children" :index="`${index}`">
+                    <template #title>
+                        <span>{{ menu.name }}</span>
+                    </template>
+                    <el-menu-item v-for="(child, cIndex) of menu.children" :key="child.name" :index="`${index}-${cIndex}`">{{ child.name }}</el-menu-item>
+                </el-sub-menu>
+                <el-menu-item v-else :index="`${index}`">
+                    <template #title>{{ menu.name }}</template>
+                </el-menu-item>
+            </template>
+        </el-menu>
     </aside>
 </template>

@@ -84,7 +84,7 @@ const router = createRouter({
     {
       path: '/technicalApplySituation',
       name: 'technicalApplySituation',
-      // title: '重要地域技术分支申请情况', // 重要技术分支主要申请人分布 // 企业通用: 重要技术地域分布-气泡
+      // title: '重要地域技术分支申请情况', // 重要技术分支主要申请人分布 // 重要技术地域分布-气泡
       component: () => import('../views/technicalApplySituation.vue')
     },
     {
@@ -120,8 +120,14 @@ const router = createRouter({
     {
       path: '/inventorDirection',
       name: 'inventorDirection',
-      // title: '发明人研发方向分析', // 共同研发技术方向-气泡
+      // title: '发明人研发方向分析',
       component: () => import('../views/inventorDirection.vue')
+    },
+    {
+      path: '/commonDirection',
+      name: 'commonDirection',
+      // title: '共同研发技术方向',
+      component: () => import('../views/commonDirection.vue')
     },
     {
       path: '/inventorTeam',

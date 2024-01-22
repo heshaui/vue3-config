@@ -15,8 +15,8 @@
 
 <template>
     <Page
-        pageTitle="新兴技术分析"
-        subTit="企业近5年才开始申请或答复新增申请的技术领域">
+        pageTitle="共同研发技术方向"
+        subTit="共同研发技术。有助于评估特定技术领域内的最佳人才并助力公司人才引进。">
         <Bubble />
         <MyTable :tableColumns="tableColumns" :data="tableData" />
     </Page>

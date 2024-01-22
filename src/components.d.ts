@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     AsideBar: typeof import('./components/basic/AsideBar.vue')['default']
     Bar: typeof import('./components/echarts/Bar.vue')['default']
+    Bubble: typeof import('./components/echarts/Bubble.vue')['default']
     CheckboxSelect: typeof import('./components/basic/CheckboxSelect.vue')['default']
     ComplexBar: typeof import('./components/echarts/ComplexBar.vue')['default']
     DateSelect: typeof import('./components/basic/DateSelect.vue')['default']

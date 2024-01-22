@@ -38,7 +38,7 @@
         ];
     }
 
-    const options = {
+    const option = {
         series: [{
             type: 'treemap',
             breadcrumb: {
@@ -95,7 +95,7 @@
 
     onMounted(() => {
         let chart = proxy.$echarts.init(dom.value);
-        chart.setOption(options)
+        chart.setOption(option)
     })
 </script>
 

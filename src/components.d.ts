@@ -31,6 +31,7 @@ declare module 'vue' {
     ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
     HistogramChart: typeof import('./components/echarts/HistogramChart.vue')['default']
     Layout: typeof import('./components/basic/Layout.vue')['default']
+    Line: typeof import('./components/echarts/Line.vue')['default']
     MyTable: typeof import('./components/basic/MyTable.vue')['default']
     OperationDialog: typeof import('./components/basic/OperationDialog.vue')['default']
     Page: typeof import('./components/basic/Page.vue')['default']

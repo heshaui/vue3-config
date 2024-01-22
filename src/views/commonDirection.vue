@@ -15,9 +15,9 @@
 
 <template>
     <Page
-        pageTitle="新进入者分析"
-        subTit="新进入者分析，近五年在该领域有新专利申请人。数据范围（专利权人 ，专利申请量， 年度（近五年））">
-        <Line />
+        pageTitle="共同研发技术方向"
+        subTit="共同研发技术。有助于评估特定技术领域内的最佳人才并助力公司人才引进。">
+        <Bubble />
         <MyTable :tableColumns="tableColumns" :data="tableData" />
     </Page>
 </template>

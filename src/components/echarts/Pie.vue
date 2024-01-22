@@ -8,7 +8,7 @@ const props = defineProps({
     annular: Boolean
 })
 
-const options = {
+const option = {
     tooltip: {
         trigger: 'item'
     },
@@ -36,7 +36,7 @@ const options = {
 
 onMounted(() => {
     let chart = proxy.$echarts.init(dom.value);
-    chart.setOption(options)
+    chart.setOption(option)
 })
 
 </script>

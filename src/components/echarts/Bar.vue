@@ -19,7 +19,7 @@ const props = defineProps({
     left: [String, Number]
 })
 
-const options: any = {
+const option: any = {
   grid: {},
   xAxis: {
     type: 'category'
@@ -38,25 +38,25 @@ if (props.axis.length != props.data.length) {
     console.warn('Bar: axis 和 data的长度不同, 渲染可能会有问题')
 }
 // 使用传入的 轴信息
-options.xAxis.data = props.axis
-options.series[0].data = props.data
+option.xAxis.data = props.axis
+option.series[0].data = props.data
 
 // 如果是横向 互换坐标轴
 if (props.horizontal) {
-    let xAxis = options.xAxis
-    let yAxis = options.yAxis
+    let xAxis = option.xAxis
+    let yAxis = option.yAxis
 
-    options.xAxis = yAxis
-    options.yAxis = xAxis
+    option.xAxis = yAxis
+    option.yAxis = xAxis
 
     if (props.left) {
-      options.grid.left = props.left
+      option.grid.left = props.left
     }
 }
 
 onMounted(() => {
     let chart: ECharts = proxy.$echarts.init(dom.value);
-    chart.setOption(options)
+    chart.setOption(option)
 })
 
 </script>

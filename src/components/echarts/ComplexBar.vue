@@ -10,7 +10,7 @@
         annular: Boolean
     })
 
-    const colors = ["rgba(43 ,140, 240,0.5)", "rgba(43 ,140, 240,0.6)", "rgba(43 ,140, 240,0.7)", "rgba(43 ,140, 240,0.8)", "rgba(43 ,140, 240,0.9)", "rgba(43 ,140, 240,1)", "rgba(0, 126 ,255,1)", "rgba(0, 107, 218,1)", "rgba(9, 96, 186,1)", "rgba(11, 80, 152,1)"]
+    const colors = ["#2b8cf080", "#2b8cf099", "#2b8cf0b3", "#2b8cf0cc", "#2b8cf0e6", "#2b8cf0", "#007eff", "#006bda", "#0960ba", "#0b5098"]
 
     const option: any = {
         legend: {

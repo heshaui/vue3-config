@@ -43,7 +43,7 @@
 <template>
     <el-popover placement="right" :width="300" :visible="visible">
       <template #reference>
-        <el-button type="primary" :icon="Operation" link class="text-[25px]" @click="visible = true"></el-button>
+        <el-button type="primary" :icon="Operation" link class="text-[25px] float-right" @click="visible = true"></el-button>
       </template>
       <h3 v-if="selectTit" class="text-[16px] mb-[10px]">{{ selectTit }}</h3>
       <el-input v-model="filterText" placeholder="输入关键字进行过滤" />

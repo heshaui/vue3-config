@@ -12,13 +12,13 @@
     const checkAll = ref(true)
     const isIndeterminate = ref(false)
     const allValue = props.data.map((item:any) => item.value)
-    const checkedData = ref(allValue)
+    const checkedData:any = ref(allValue)
     
-    const handleCheckAllChange = (val: boolean) => {
+    const handleCheckAllChange = (val: any) => {
         checkedData.value = val ? allValue : []
         isIndeterminate.value = false
     }
-    const handlecheckedDataChange = (value: string[]) => {
+    const handlecheckedDataChange = (value: any) => {
         const checkedCount = value.length
         checkAll.value = checkedCount === props.data.length
         isIndeterminate.value = checkedCount > 0 && checkedCount < props.data.length

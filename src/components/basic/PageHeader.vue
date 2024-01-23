@@ -9,6 +9,6 @@
     <div>
         <h3 class="text-[16px] font-bold my-[10px]">{{ pageTitle }}</h3>
         <p class="text-[14px]/[30px]">{{ subTit }}</p>
-        <el-divider style="margin-top: 10px;"/>
+        <el-divider class="my-[10px]"/>
     </div>
 </template>

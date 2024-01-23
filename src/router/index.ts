@@ -18,7 +18,7 @@ const router = createRouter({
     {
       path: '/report',
       name: 'report',
-      // title: '技术导航概览', // 付费版
+      // title: '下载报告',
       component: () => import('../views/report.vue')
     },
     // {

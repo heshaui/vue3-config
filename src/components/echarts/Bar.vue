@@ -20,7 +20,15 @@ const props = defineProps({
 })
 
 const option: any = {
-  grid: {},
+  legend: {
+    show: true,
+    bottom: 10,
+    // data: [
+    //   {
+    //     name: '系列1',
+    //   }
+    // ]
+  },
   xAxis: {
     type: 'category'
   },
@@ -29,6 +37,7 @@ const option: any = {
   },
   series: [
     {
+      name: '专利申请数量',
       data: [],
       type: 'bar'
     }
@@ -62,8 +71,10 @@ onMounted(() => {
 </script>
 
 <template>
-    <h4 class="text-[20px] font-bold text-center">{{ title }}</h4>
-    <div ref="dom" class="w-[100%] h-[400px]"></div>
+    <div>
+      <h4 class="text-[20px] font-bold text-center">{{ title }}</h4>
+      <div ref="dom" class="w-[100%] h-[400px]"></div>
+    </div>
 </template>
 
 <style scoped lang="scss">

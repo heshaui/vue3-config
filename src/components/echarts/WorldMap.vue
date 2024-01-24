@@ -4,7 +4,8 @@ let dom = ref(null)
 const { proxy } = getCurrentInstance() as any
 
 defineProps({
-    title: String
+    title: String,
+    data: Array
 })
 
 onMounted(() => {

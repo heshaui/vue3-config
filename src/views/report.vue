@@ -36,6 +36,46 @@
             />
             <MyTable :tableColumns="tableColumns" :data="tableData" />
         </section>
+
+        <section class="mt-[40px]">
+            <p class="text-[20px] font-bold mb-[20px]">专利类</p>
+            <p class="mb-[20px]">分析该技术领域申请人专注于保护技术创新的功能还是外观。其中，发明专利相对于实用新型的占比，反映该技术领域的创新程度高低。</p>
+            <hr />
+            <Pie />
+            <MyTable :tableColumns="tableColumns" :data="tableData" />
+        </section>
+
+        <section class="mt-[40px]">
+            <p class="text-[20px] font-bold mb-[20px]">技术构成分析-小组</p>
+            <p class="mb-[20px]">分析该技术领域主要技术分支的专利分布量。通过该分析可帮助了解各技术分支的创新热度。</p>
+            <hr />
+            <TreeMap />
+            <MyTable :tableColumns="tableColumns" :data="tableData" />
+        </section>
+
+        <section>
+            <p class="text-[20px] font-bold mb-[20px]">申请人排名分析</p>
+            <p class="mb-[20px]">分析该技术领域申请人的专利数量的排名情况。可以帮助发现创新成果积累较多的专利申请人，并据此进一步分析其专利竞争实力。</p>
+            <hr />
+            <Bar class="w-[800px] my-[20px] mx-auto"
+                horizontal
+                :axis="['2012', '2013', '2014', '2015', '2016', '2017', '2018']"
+                :data="[100, 200, 500, 200, 100, 400, 300]"
+            />
+            <MyTable :tableColumns="tableColumns" :data="tableData" />
+        </section>
+
+        <section>
+            <p class="text-[20px] font-bold mb-[20px]">发明人排名分析</p>
+            <p class="mb-[20px]">分析该技术领域内的主要发明人。有助于评估特定技术领域内的最佳人才并助力公司人才引进。</p>
+            <hr />
+            <Bar class="w-[800px] my-[20px] mx-auto"
+                horizontal
+                :axis="['2012', '2013', '2014', '2015', '2016', '2017', '2018']"
+                :data="[100, 200, 500, 200, 100, 400, 300]"
+            />
+            <MyTable :tableColumns="tableColumns" :data="tableData" />
+        </section>
     </Page>
 </template>
 

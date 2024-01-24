@@ -18,7 +18,7 @@
     <Page
         pageTitle="技术构成"
         subTit="分析该技术领域主要技术分支的专利分布量。通过该分析可帮助了解各技术分支的创新热度。">
-        <RectangleTree />
+        <TreeMap />
         <MyTable :tableColumns="tableColumns" :data="tableData" />
     </Page>
 </template>

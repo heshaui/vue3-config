@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import worldMapJson from '@/assets/json/worldMap.json'
 let dom = ref(null)
-const { proxy } = getCurrentInstance()
+const { proxy } = getCurrentInstance() as any
 
 defineProps({
     title: String

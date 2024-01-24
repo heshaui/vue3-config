@@ -50,6 +50,7 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SearchBar: typeof import('./components/basic/SearchBar.vue')['default']
+    TreeMap: typeof import('./components/echarts/TreeMap.vue')['default']
     WorldMap: typeof import('./components/echarts/WorldMap.vue')['default']
   }
 }

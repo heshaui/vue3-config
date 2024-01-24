@@ -19,7 +19,7 @@
                     <WorldMap title="目标市场国" />
                 </el-card>
                 <el-card class="flex-1" shadow="hover">
-                    <RectangleTree title="技术构成" />
+                    <TreeMap title="技术构成" />
                 </el-card>
             </div>
             <div class="flex mt-[20px]">

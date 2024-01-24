@@ -1,0 +1,65 @@
+{
+  "id": "4420647",
+  "name": "ant-chart",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4354248",
+      "name": "图表-折线图",
+      "font_class": "line",
+      "unicode": "eb96",
+      "unicode_decimal": 60310
+    },
+    {
+      "icon_id": "1546597",
+      "name": "图表",
+      "font_class": "bar",
+      "unicode": "e698",
+      "unicode_decimal": 59032
+    },
+    {
+      "icon_id": "2043951",
+      "name": "气泡图",
+      "font_class": "qipao",
+      "unicode": "e6b7",
+      "unicode_decimal": 59063
+    },
+    {
+      "icon_id": "8795879",
+      "name": "矩形树图",
+      "font_class": "tree",
+      "unicode": "e694",
+      "unicode_decimal": 59028
+    },
+    {
+      "icon_id": "26711833",
+      "name": "饼状图",
+      "font_class": "pie",
+      "unicode": "e650",
+      "unicode_decimal": 58960
+    },
+    {
+      "icon_id": "27074056",
+      "name": "柱状-折线图",
+      "font_class": "bar-line",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "27200591",
+      "name": "图例-环形图",
+      "font_class": "ring-chart",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "35592139",
+      "name": "下载",
+      "font_class": "download",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    }
+  ]
+}

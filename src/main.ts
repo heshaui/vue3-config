@@ -1,4 +1,5 @@
 import './assets/main.css'
+import './assets/fonts/iconfont.css'
 // 引入报表组件
 import * as echarts from 'echarts'
 // 引入图标

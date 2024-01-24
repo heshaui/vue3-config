@@ -5,7 +5,8 @@ const { proxy } = getCurrentInstance() as any
 const props = defineProps({
     title: String,
     // 是否环形
-    annular: Boolean
+    annular: Boolean,
+    data: Array
 })
 
 const option = {
@@ -17,7 +18,7 @@ const option = {
             // name: 'Access From',
             type: 'pie',
             radius: props.annular ? ['40%', '70%'] : '50%',
-            data: [
+            data: props.data ?? [
                 { value: 1048, name: 'PCT' },
                 { value: 735, name: '发明' },
                 { value: 580, name: '实用新型' },

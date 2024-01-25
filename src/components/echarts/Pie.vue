@@ -1,11 +1,16 @@
 <script setup lang="ts">
 let dom = ref(null)
+// chart实例
+let chart:any = null
 const { proxy } = getCurrentInstance() as any
 
 const props = defineProps({
     title: String,
     // 是否环形
-    annular: Boolean,
+    annular: {
+        type: Boolean,
+        default: false
+    },
     data: Array
 })
 
@@ -30,15 +35,35 @@ const option = {
                     shadowOffsetX: 0,
                     shadowColor: 'rgba(0, 0, 0, 0.5)'
                 }
+            },
+            label: {
+                formatter: '{b} : {d}% ({c})'
             }
         }
     ]
 };
 
-onMounted(() => {
-    let chart = proxy.$echarts.init(dom.value);
-    chart.setOption(option)
-})
+    // 初始化echarts实例
+    const initChart = () => {
+        chart = proxy.$echarts.init(dom.value)
+        chart.setOption(option)
+    }
+    // 重置配置项
+    const resetOption = () => {
+        option.series[0].radius = props.annular ? ['40%', '70%'] : '50%'
+    }
+    watch(props, ()=> {
+        if (chart) {
+            chart.dispose()
+            // 重新渲染
+            resetOption()
+            initChart()
+        }
+    }, {deep: true})
+
+    onMounted(() => {
+        initChart()
+    })
 
 </script>
 
